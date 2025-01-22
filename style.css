@@ -1,0 +1,126 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: #e4a112;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Estilos para o logo */
+#logo {
+    margin-right: 20px;
+}
+
+#logo img {
+    max-height: 80px;
+}
+
+/* Estilos para o título principal */
+h1 {
+    color: white;
+    text-align: center;
+}
+
+/* Estilos para o conteúdo principal (caixas de IA) */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.ia-box {
+    background-color: #111;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    transition: box-shadow 0.3s ease;
+}
+
+.ia-box:hover {
+    box-shadow: 0 0 15px white;
+}
+
+.ia-box h2 {
+    margin-top: 0;
+    color: white;
+}
+
+.ia-box a {
+    background-color: #e4a112;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.ia-box a:hover {
+    background-color: #ffb833;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    #logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .ia-box {
+        width: calc(100% - 40px);
+        margin: 10px 20px;
+    }
+}
+
+/* Para telas menores que 480px (celulares menores) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    .ia-box {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .ia-box h2 {
+        font-size: 18px;
+    }
+
+    .ia-box a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}

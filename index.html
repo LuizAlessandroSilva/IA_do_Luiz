@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas de IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/logo luiz1.png" alt="Logo da Agência LDV">
+        </div>
+        <h1>Ferramentas de Inteligência Artificial</h1>
+    </header>
+
+    <main>
+        <script>
+            const ias = [
+                { "Nome": "Inateligencia Artificial", "Link de acesso": null },
+                { "Nome": "ChatGPT", "Link de acesso": "https://chat.openai.com/" },
+                { "Nome": "Ai.Studio", "Link de acesso": "https://aistudio.google.com/prompts/new_chat" },
+                { "Nome": "Cohesive", "Link de acesso": "https://cohesive.so/?fpr=andreu87&gclid=Cj0KCQjwgNanBhDUARIsAAeIcAvRWu5NZDjDuk97C5kxsflLSzuhyfqFmRf5C3kvopqdsSVcaSZmH1QaAgLJEALw_wcB" },
+                { "Nome": "ChatPDF - Chat with any PDF!", "Link de acesso": "https://www.chatpdf.com/?utm_source=google&utm_medium=cpc&utm_campaign=20839149760&utm_term=chat%20pdf&utm_content=683526164333&device=c&matchtype=p&network=g&adposition=&gclid=Cj0KCQiAw6yuBhDrIsACf94RUx5IMDC7Z5_4Pxj8LXoFaZaiGYsRqeVzCO6m4Z_YAggJQCqB2bH1saAkF7EALw_wcB&gad_source=1" },
+                { "Nome": "Whimsical", "Link de acesso": "https://whimsical.com/" },
+                { "Nome": "GENAI", "Link de acesso": "https://genai.works/" },
+                { "Nome": "Uizard", "Link de acesso": "https://app.uizard.io/prototypes/create-prototype-editor" },
+                { "Nome": "Suno AI", "Link de acesso": "https://sunoai.ai/pt/welcome" },
+                { "Nome": "Overview - OpenAI API", "Link de acesso": "https://platform.openai.com/docs/overview" },
+                { "Nome": "NotebookLM", "Link de acesso": "https://notebooklm.google/" },
+                { "Nome": "Haiper - AI Video Generator", "Link de acesso": "https://haiper.ai/onboarding" },
+                { "Nome": "Claude", "Link de acesso": "https://claude.ai/login?returnTo=%2F%3F" },
+                { "Nome": "Websim", "Link de acesso": "https://websim.ai/" },
+                { "Nome": "Animated Drawings", "Link de acesso": "https://sketch.metademolab.com/canvas" },
+                { "Nome": "Topview - AI Video Editor", "Link de acesso": "https://www.topview.ai/?via=mari" },
+                { "Nome": "Flux", "Link de acesso": "https://flux-ai.io/pt/?gad_source=1&gclid=Cj0KCQjw6oi4BhD1ARIsAL6pox0RnuXOHhCq0dTW1LOPKzk5NX-Sloshj9F_23Fp9WjFvjC12GC8avMaAkflEALw_wcB" },
+                { "Nome": "GPT Engineer", "Link de acesso": "https://gptengineer.app/" },
+                { "Nome": "Teachable Machine", "Link de acesso": "https://teachablemachine.withgoogle.com/" },
+                { "Nome": "Stretch", "Link de acesso": "https://stretch3.github.io/" },
+                { "Nome": "Perplexity", "Link de acesso": "https://www.perplexity.ai/" },
+                { "Nome": "Gamma", "Link de acesso": "https://gamma.app/" },
+                { "Nome": "Gemini", "Link de acesso": "https://gemini.google.com/app/c835c8d5597d5706" },
+                { "Nome": "Face Swap", "Link de acesso": "https://aifaceswap.io/" },
+                { "Nome": "Fooocus Colab", "Link de acesso": "https://colab.research.google.com/github/lllyasviel/Fooocus/blob/main/fooocus_colab.ipynb" },
+                { "Nome": "Teachy","Link de acesso": "https://www.teachy.com.br/?gad_source=1&gclid=Cj0KCQiAy8K8BhCZARIsAKJ8sfR6luC3R1wYyDiE1WTc7TztaDOiQOd_oBmRfCaxKje_vUdYDueWxVAaAm6tEALw_wcB" },
+                { "Nome": "CodePen", "Link de acesso": "https://codepen.io/" },
+                { "Nome": "NotebookLM", "Link de acesso": "https://notebooklm.google.com/?_gl=1*ae8hrx*_ga*MjAyNDM5NjMzLjE3MjAxOTYxNDc.*_ga_W0LDH41ZCB*MTczMjY0MDI2OC4xNC4xLjE3MzI2NDAyNjguNjAuMC4w" },
+                { "Nome": "Gradescópio", "Link de acesso": "https://www.gradescope.com/" },
+                { "Nome": "Le Chat - Mistral AI", "Link de acesso": "https://chat.mistral.ai/chat" },
+                { "Nome": "Mapify: Transforme qualquer coisa em mapa mental com IA; anteriormente Chatmind", "Link de acesso": null },
+                { "Nome": "Cópia de sites", "Link de acesso": "https://saveweb2zip.com/en" },
+                { "Nome": "ImageFX", "Link de acesso": "https://labs.google/fx/pt/tools/image-fx" },
+                { "Nome": "Wevoicer", "Link de acesso": "https://wevoicer.com/" },
+                { "Nome": "Labs Google FX", "Link de acesso": "https://labs.google/fx/pt" },
+                { "Nome": "SeaArt AI", "Link de acesso": "https://www.seaart.ai/pt" }
+            ];
+
+            const body = document.body;
+            const main = document.querySelector('main');
+            ias.forEach(ia => {
+                if (ia["Link de acesso"]) {
+                    const box = document.createElement('div');
+                    box.classList.add('ia-box');
+
+                    const title = document.createElement('h2');
+                    title.textContent = ia.Nome;
+                    box.appendChild(title);
+
+                    const link = document.createElement('a');
+                    link.href = ia["Link de acesso"];
+                    link.textContent = "Acessar";
+                    link.target = "_blank";
+                    box.appendChild(link);
+
+                    main.appendChild(box);
+                }
+            });
+        </script>
+    </main>
+</body>
+</html>
